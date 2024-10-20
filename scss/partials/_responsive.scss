@@ -1,0 +1,45 @@
+@media (max-width: 600px) {
+    main {
+        .gallery {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+        }
+        .fruit-hover {
+            figure {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+                position: relative;
+        
+                img {
+                    width: 100%;
+                    display: block;
+                }
+        
+                figcaption {
+                  position: absolute;
+                  top: 0;
+                  font-size: 1rem;
+                  background-color: red;
+                  color: white;
+                  display: none;
+                }
+              
+                img:hover + figcaption {
+                  display: block;
+                }
+            } 
+        }
+    }
+}
+
+@media (max-width: 380px) {
+    h2 {
+        z-index: 1;
+        background-color: $secondary-color;
+        display: flex;
+        position: sticky;
+        top: 99px
+    }
+}
